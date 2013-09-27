@@ -9,11 +9,26 @@ using System.Data.SqlClient;
     {
         userMasterDAL userMasterDAL = new userMasterDAL();
 
-        public bool insertPasscode(int passcode)
+        public bool updatePassword(userMasterBO userMasterBO)
         {
             try
             {
-                return userMasterDAL.insertPasscode(passcode);
+                return (userMasterDAL.updatePassword(userMasterBO));
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+
+            }
+        }
+        public bool insertPasscode(userMasterBO UserMasterBO)
+        {
+            try
+            {
+                return userMasterDAL.insertPasscode(UserMasterBO);
             }
             catch
             {

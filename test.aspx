@@ -6,11 +6,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
+    <!-- google analytics script -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-44359262-1', 'venturepact.com');
+        ga('send', 'pageview');
+
+</script>
     <!-- script to logout from  google session  -->
     <script>
         function logout() {
 
-            document.location.href = " https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost:2203/Default.aspx";
+            document.location.href = " https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://ratemymp.venturepact.com/Default.aspx";
         }
 
     </script> 
@@ -67,5 +80,26 @@
         <br />
         <br />
     </form>
+    
+    <!-- user nap script--> 
+      <script type="text/javascript">
+          var _usersnapconfig = {
+              apiKey: '4ad9c2d8-f944-4f85-adf1-2d118d7247ca',
+              valign: 'bottom',
+              halign: 'right',
+              tools: ["pen", "highlight", "note"],
+              lang: 'en',
+              commentBox: true,
+              emailBox: true
+          };
+          (function () {
+              var s = document.createElement('script');
+              s.type = 'text/javascript';
+              s.async = true;
+              s.src = '//api.usersnap.com/usersnap.js';
+              var x = document.getElementsByTagName('head')[0];
+              x.appendChild(s);
+          })();
+</script>
 </body>
 </html>

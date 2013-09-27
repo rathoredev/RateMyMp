@@ -8,6 +8,18 @@
     <meta charset="utf-8" />
         <title>Welcome to Rate My MP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <script>
+          (function (i, s, o, g, r, a, m) {
+              i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                  (i[r].q = i[r].q || []).push(arguments)
+              }, i[r].l = 1 * new Date(); a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+          })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+          ga('create', 'UA-44359262-1', 'venturepact.com');
+          ga('send', 'pageview');
+
+</script>
     <link href="https://fonts.googleapis.com/css?family=Limelight|Flamenco|Federo|Yesteryear|Josefin Sans|Spinnaker|Sansita One|Handlee|Droid Sans|Oswald:400,300,700" media="screen" rel="stylesheet" type="text/css" />
     <link href="/CSS/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="/CSS/bootstrap-responsive.css" media="screen" rel="stylesheet" type="text/css" />
@@ -142,9 +154,8 @@
 
                 var k = document.getElementById('<%= signinemail.ClientID %>').value;
                 if (k !="") {
-                    //document.getElementById('<%= emailToResetPassword.ClientID %>').value = k;
                     
-                   // document.location.href = "forgetPassword.aspx?email="+k;
+                   document.location.href = "forgetPassword.aspx?email="+k;
                 }
                 else {
                     alert("Please enter email and click to reset your password.");
@@ -171,7 +182,7 @@
               <asp:TextBox ID="signinPassword"  class="textinput textinput-1 textinput-3" placeholder="password" runat="server" TextMode="Password"></asp:TextBox>
            
                 <asp:TextBox ID="signinemail" class="textinput textinput-2 textinput-4" placeholder="email" runat="server"></asp:TextBox>
-               <h1 class="heading heading-1 heading-2 heading-3">Raise Your Voice</h1> <!-- Engage Your Representatives  -->
+               <h1 class="heading heading-1 heading-2 heading-3">Engage Your Representatives</h1> <!-- Engage Your Representatives  Raise Your Voice -->
            <a class="dom-link" onclick="checkemail()" href="#">Forget your password ?</a> 
               <asp:HiddenField ID="emailToResetPassword" runat="server" />
             <label class="checkbox">

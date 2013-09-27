@@ -14,12 +14,25 @@ using System.Configuration;
         string query;
         string[] str = new string[2];
 
-        public bool insertPasscode(int passcode)
+        public bool updatePassword(userMasterBO userMasterBO)
         {
+
             try
             {
-               
-                return true;
+                 if(con.State==ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                 query = "passwordUpdate";
+                 cmd = new SqlCommand(query,con);
+                 cmd.CommandType = CommandType.StoredProcedure;
+                 cmd.Parameters.AddWithValue("@email", userMasterBO.email);
+                 cmd.Parameters.AddWithValue("@passcode", userMasterBO.passcode);
+                 cmd.Parameters.AddWithValue("@password", userMasterBO.password);
+                 SqlParameter result = cmd.Parameters.Add("@res",SqlDbType.Bit);
+                 result.Direction = ParameterDirection.Output;
+                 cmd.ExecuteNonQuery();
+                 return (bool .Parse(result.Value.ToString()));
             }
             catch
             {
@@ -27,7 +40,43 @@ using System.Configuration;
             }
             finally
             {
+                 if(con.State==ConnectionState.Open)
+                    {
+                        con.Close();
+                    }
+            }
+        }
+        
 
+        public bool insertPasscode(userMasterBO UserMasterBO)
+        {
+            try
+            {
+
+                if(con.State==ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                query = "insertUpdatePasscode";
+                cmd = new SqlCommand(query, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@passcode", UserMasterBO.passcode);
+                cmd.Parameters.AddWithValue("@email", UserMasterBO.email);
+                SqlParameter result = cmd.Parameters.Add("@res",SqlDbType.Bit);
+                result.Direction = ParameterDirection.Output;
+                cmd.ExecuteNonQuery();
+                return (bool.Parse(result.Value.ToString()));
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                    if(con.State==ConnectionState.Open)
+                    {
+                        con.Close();
+                    }
             }
         }
         public bool checkValidEmailToResetPassword(userMasterBO userMasterBO)
@@ -54,7 +103,10 @@ using System.Configuration;
             }
             finally
             {
-
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
             }
         }
 
