@@ -21,3 +21,5 @@ To achieve the functionality above, Rate My MP relies on the following technolog
 Directory Layout
 
 Rate My MP’s root directory contains the following directories and files:
+
+This is just a dummy text
