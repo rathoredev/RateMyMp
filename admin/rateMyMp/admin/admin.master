@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin_admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+ 
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script type="text/javascript" src="../jquery/jquery.js"></script>
+</head>
+<body>
+
+    
+    <form id="form1" runat="server">
+
+
+<div id="container">
+        <div id="banner">
+           <img src="../images/hello.png" />
+        </div>
+        <div id="space">
+        <br />
+            <br />
+            </div>
+     <div id="main">
+            <div id="sidebar">
+                <a href="Home.aspx"><div class="buttons"><img src="images/home.png" /><br />HOME</div></a>
+                <a href="regMp.aspx"><div class="buttons"><img src="images/addmp.png" /><br />Register MP</div></a>
+                <a href="addConstituency.aspx"><div class="buttons"><img src="images/add.png" /><br />Add Constituency</div></a>
+                <a href="addCountry.aspx"><div class="buttons"><img src="images/country.png" /><br />Add Country</div></a>
+                <a href="addState.aspx"><div class="buttons"><img src="images/add.png" /><br />Add State</div></a>
+                <a href="viewMp.aspx"><div class="buttons"><img src="images/mpview.png" /><br />View MP</div></a>
+                <a href="viewUsers.aspx"><div class="buttons"><img src="images/userview.png" /><br />View Users</div></a>
+            </div>
+        
+         
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,80 @@
+﻿#container {
+    margin:auto;    
+    background-repeat:no-repeat;    
+    width:1000px;
+    border:1px  dashed red;    
+}
+
+
+#banner {
+    margin:auto;
+    width:1000px;   
+    height:auto; 
+}
+
+*
+{
+    margin:0px;
+    padding:0px;
+    
+}
+
+#main {
+    height:auto;
+    width:100%;
+    float: left;
+}
+
+#sidebar {
+    padding-top:18px;
+    padding-bottom:18px;
+    background-color:#ffffff;
+    height:auto;
+    width: 200px;
+    float:left;
+}
+
+
+
+#cont {
+ background-image:url("../images/new3.png");
+ width:750px;
+ float:left;
+ border:1px solid red;
+ height:500px; 
+}
+
+
+.buttons {
+    background-image:url("../images/bt-bg.jpg");
+    background-color:#ffffff;
+    margin-bottom:3px;
+    margin-top:3px;
+    margin-left:4px;
+    margin-right:2px;
+    color:#000000;
+    cursor:pointer;
+    font-family:'Lucida Console';
+    font-size:16px;
+/*    border-width:2px;*/
+    border-style:solid;
+    border-color:#000000;
+    text-align:center;
+    height: 55px;
+    width:180px;
+}
+.buttons:hover {
+    background-color:#1de2ff;
+    color: #ffffff;
+    box-shadow:#000000 2px 2px;
+}
+.buttons:active {
+    position:relative;
+	top:2px;
+}
+   
+
+
+
+
+
